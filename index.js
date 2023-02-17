@@ -14,8 +14,9 @@ app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
 // Concept #1: app get
+// Help from Ed post: https://edstem.org/us/courses/36322/discussion/2584489
 app.get('/',(req, res) => {
-    res.send('Hello World!');
+    res.render("todo.ejs");
     });
 // Concept #2: app post
 app.post('/',(req, res) => {
